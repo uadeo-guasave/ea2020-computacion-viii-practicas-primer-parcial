@@ -38,10 +38,45 @@ public class Estadistica {
         }
     }
 
+    void determinarPromedio() {
+        int sum = 0;
+        for (int i = 0; i < vector.length; i++) {
+            sum += vector[i];
+        }
+        System.out.println("El promedio de los valores del vector es: " + sum / vector.length);
+    }
+
+    void obtenerElValorMaximo() {
+        int aux = 0;
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] > aux)
+                aux = vector[i];
+        }
+        System.out.println("El valor máximo del vector es " + aux);
+    }
+
+    void obtenerElValorMinimo() {
+        int aux = 0;
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] < aux)
+                aux = vector[i];
+        }
+        System.out.println("El valor mínimo del vector es " + aux);
+    }
+
+    void imprimirValoresDelVector() {
+        // TODO
+    }
+
+    void calcularLaModaDelVector() {
+        // TODO
+    }
+
     public static void main(String[] args) {
         Estadistica obj = new Estadistica();
         obj.generarNumerosAleatorios();
         obj.frecuencia();
         obj.despliega();
+        obj.determinarPromedio();
     }
 }
