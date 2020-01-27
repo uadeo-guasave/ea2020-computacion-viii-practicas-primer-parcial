@@ -27,7 +27,7 @@ public class Estadistica {
 
     void despliega() {
         for (int i = 0; i < fre.length; i++)
-            System.out.println(i * 10 + " Frecuencia " + fre[i]);
+            System.out.println((i + 1) * 10 + " Frecuencia " + fre[i]);
     }
 
     public static void main(String[] args) {
