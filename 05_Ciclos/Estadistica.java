@@ -56,7 +56,7 @@ public class Estadistica {
     }
 
     void obtenerElValorMinimo() {
-        int aux = 0;
+        int aux = 100;
         for (int i = 0; i < vector.length; i++) {
             if (vector[i] < aux)
                 aux = vector[i];
@@ -65,18 +65,37 @@ public class Estadistica {
     }
 
     void imprimirValoresDelVector() {
-        // TODO
+        System.out.print("[");
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print(vector[i]);
+            if (i != vector.length - 1) {
+                System.out.print(",");
+            } else {
+                System.out.println("]");
+            }
+        }
     }
 
     void calcularLaModaDelVector() {
-        // TODO
+        int max = 0, pos = 0;
+        for (int i = 0; i < fre.length; i++) {
+            if (fre[i] > max) {
+                max = fre[i];
+                pos = i;
+            }
+        }
+        System.out.println("Lo moda es " + ((pos + 1) * 10) + " aparece " + max + " veces.");
     }
 
     public static void main(String[] args) {
         Estadistica obj = new Estadistica();
         obj.generarNumerosAleatorios();
+        obj.imprimirValoresDelVector();
         obj.frecuencia();
         obj.despliega();
         obj.determinarPromedio();
+        obj.obtenerElValorMaximo();
+        obj.obtenerElValorMinimo();
+        obj.calcularLaModaDelVector();
     }
 }
